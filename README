@@ -1,0 +1,25 @@
+This plugin will split a single line function call so that every argument is on
+its own line.
+
+Example:
+
+  foo(really_long_arg_name1, really_long_arg_name2, really_long_arg_name3)
+
+Becomes:
+
+  foo(
+    really_long_arg_name1,
+    really_long_arg_name2,
+    really_long_arg_name3
+  )
+
+To run the plugin map a key combo in your vimrc like this:
+
+  nnoremap <silent> <Leader>sa :call ArgsSplit()<CR>
+
+Then run the ArgsSplit() function on the line you wish to split.
+
+This plugin requires Vim to be compiled with Ruby support.
+
+To install use Pathogen or Vundle, or drop plugin/args_split.vim in your plugin 
+directory.
